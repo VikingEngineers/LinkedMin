@@ -1,4 +1,17 @@
-{% load static %}
-<img src="{% static 'images/logo.svg' %}"
-<a href="{% url 'create-project' %}">Add Project</a>
+<header>
+    <div id="top-header">              
+        <nav>
+            <div id="menu">
+                <a id="logo" href="">LinkedMin</a> 
+                <ul>
+                <li><a href="#">Специалисты</a></li>
+                <li><a href="#">Проекты</a></li>
+                <li><a href="{% url 'create-project' %}">Add Project</a></li>
+                <li><a href="#">Аккаунт</a></li>
+                <li><a href="#">SignUp / LogIn</a></li>
+                </ul>
+              </div>        
+        </nav>
+    </div>   
+</header>
 <hr>
