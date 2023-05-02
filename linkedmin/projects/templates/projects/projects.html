@@ -3,11 +3,13 @@
 {% block content %}
 <div class="main-container">
     <h1>Показывай себя и свои проекты. <br> Находи вдохноевение, коллег и новые знания.</h1>
-    <form action="" method="get">
-        <input name="s" placeholder="Искать здесь..." type="search">
-        <button type="submit">Поиск</button>
+    <form action="{% url 'projects' %}" method="get">
+        <input class="input-search" placeholder="Search by Project Title..." type="text" name="search_query" value="{{search_query}}">
+        <!--<button type="submit">Search</button>-->
+        <input class="btn-search" type="submit" value="Search" />
     </form>
 </div>
+
 
 <ul>
     {% for project in projects %}
@@ -20,15 +22,46 @@
     {% endfor %}
     </ul>
 
-<ul class="uk-pagination uk-flex-center" uk-margin>
-    <li><a href="#"><span uk-pagination-previous></span></a></li>
-    <li><a href="#">1</a></li>
-    <li class="uk-disabled"><span>...</span></li>
-    <li><a href="#">5</a></li>
-    <li><a href="#">6</a></li>
-    <li class="uk-active"><span>7</span></li>
-    <li><a href="#">8</a></li>
-    <li><a href="#"><span uk-pagination-next></span></a></li>
-</ul>
+
+    <div class = "container-card">
+    <div class="card" style="width: 18rem; margin="18rem"">
+        <img src="{{project.featured_image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">title {{project.title}}</h5>
+          <p class="card-text">created {{project.created}}</p>
+          <p class="card-text">description {{project.description}}</p>
+          <p class="card-text">Feedback {{project.vote_total}} Votes</p>
+          <p class="card-text">{{project.vote_ratio}}Positive</p>   
+          <p class="card-text">tags{{project.tags}}</p>        
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="{{project.featured_image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">title {{project.title}}</h5>
+          <p class="card-text">created {{project.created}}</p>
+          <p class="card-text">description {{project.description}}</p>
+          <p class="card-text">Feedback {{project.vote_total}} Votes</p>
+          <p class="card-text">{{project.vote_ratio}}Positive</p>   
+          <p class="card-text">tags{{project.tags}}</p>        
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="{{project.featured_image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">title {{project.title}}</h5>
+          <p class="card-text">created {{project.created}}</p>
+          <p class="card-text">description {{project.description}}</p>
+          <p class="card-text">Feedback {{project.vote_total}} Votes</p>
+          <p class="card-text">{{project.vote_ratio}}Positive</p>   
+          <p class="card-text">tags{{project.tags}}</p>        
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+
 
 {% endblock content %}

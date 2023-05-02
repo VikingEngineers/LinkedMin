@@ -106,8 +106,8 @@ form {
   width: 850px;
   margin: 0 auto;
 }
-input {
-  width: 100%;
+.input-search {
+  width: 89%;
   height: 42px;
   padding-left: 10px;
   border: 2px solid #05386B;
@@ -147,5 +147,29 @@ button:before {
     margin-bottom: 100px;
     background: #5CDB95;
 }
+.btn{
+    background-color: #8EE4AF;
+    border-color: #05386B;
+    border-radius: 10px;
+    border-width: 2px;
+}
+.btn-search{
+    background-color: #8EE4AF;
+    border-color: #05386B;
+    border-radius: 5px;
+    border-width: 2px;
+    height: 42px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #05386B;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 600;
+}
 
-
+.container-card{
+    display:flex;
+}
+footer{
+    background-color: #5CDB95;
+}
