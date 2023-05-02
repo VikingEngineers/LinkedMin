@@ -1,18 +1,34 @@
 {% extends 'main.html' %}
 
 {% block content %}
-
-<h1>Projects template</h1>
+<div class="main-container">
+    <h1>Показывай себя и свои проекты. <br> Находи вдохноевение, коллег и новые знания.</h1>
+    <form action="" method="get">
+        <input name="s" placeholder="Искать здесь..." type="search">
+        <button type="submit">Поиск</button>
+    </form>
+</div>
 
 <ul>
-{% for project in projects %}
+    {% for project in projects %}
+    
+    <li>
+        Title: <a href="{% url 'project' project.id %}">{{project.title}}</a> --- {{project.created}} --- 
+        <a href="{% url 'update-project' project.id %}">Edit</a> --- <a href="{% url 'delete-project' project.id %}">Delete</a>
+    </li>
+    
+    {% endfor %}
+    </ul>
 
-<li>
-    Title: <a href="{% url 'project' project.id %}">{{project.title}}</a> --- {{project.created}} --- 
-    <a href="{% url 'update-project' project.id %}">Edit</a> --- <a href="{% url 'delete-project' project.id %}">Delete</a>
-</li>
-
-{% endfor %}
+<ul class="uk-pagination uk-flex-center" uk-margin>
+    <li><a href="#"><span uk-pagination-previous></span></a></li>
+    <li><a href="#">1</a></li>
+    <li class="uk-disabled"><span>...</span></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">6</a></li>
+    <li class="uk-active"><span>7</span></li>
+    <li><a href="#">8</a></li>
+    <li><a href="#"><span uk-pagination-next></span></a></li>
 </ul>
 
 {% endblock content %}
