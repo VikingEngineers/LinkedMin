@@ -1,18 +1,43 @@
 {% extends 'main.html' %}
 
 {% block content %}
+<div class="main-container">
+    <h1>Показывай себя и свои проекты. <br> Находи вдохноевение, коллег и новые знания.</h1>
+    {% csrf_token %}
+    <form action="{% url 'projects' %}" method="get">
+        <input class="input-search" placeholder="Search by Project Title..." type="text" name="search_query" value="{{search_query}}">
+        <!--<button type="submit">Search</button>-->
+        <input class="btn-search" type="submit" value="Search" />
+    </form>
+</div>
 
-<h1>Projects template</h1>
 
-<ul>
-{% for project in projects %}
+<!--<ul>
+    {% for project in projects %}
+    
+    <li>
+        Title: <a href="{% url 'project' project.id %}">{{project.title}}</a> --- {{project.created}} --- 
+        <a href="{% url 'update-project' project.id %}">Edit</a> --- <a href="{% url 'delete-project' project.id %}">Delete</a>
+    </li>
+    
+    {% endfor %}
+    </ul>-->
+    {% for project in projects %}
 
-<li>
-    Title: <a href="{% url 'project' project.id %}">{{project.title}}</a> --- {{project.created}} --- 
-    <a href="{% url 'update-project' project.id %}">Edit</a> --- <a href="{% url 'delete-project' project.id %}">Delete</a>
-</li>
+    <div class="container-card">
+      <div class="project-card">
+        <img src="{{project.featured_image.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">title {{project.title}}</h5>
+          <p class="card-text">created {{project.created}}</p> 
+          <p class="card-text">description {{project.description}}</p>
+          <p class="card-text">Feedback {{project.vote_total}} Vote {{project.vote_total|pluralize:"s"}}</p>
+          <p class="card-text">Positive {{project.vote_ratio}}%</p>   
+          <p class="card-text">tags{{project.tags}}</p>        
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
 
-{% endfor %}
-</ul>
-
+    {% endfor %}
 {% endblock content %}
