@@ -176,7 +176,7 @@ button:before {
     font-size: 16px;
     font-weight: 600;
 }
-
+/*Стиль карточки проекта на главной странице*/
 .container-card{
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -196,6 +196,10 @@ button:before {
   background-color: #ffffff;
   margin: 50px;
 }
+/*Стиль single-project*/
+
+
+/*Подвал*/
 footer{
     background-color: #5CDB95;
 }
