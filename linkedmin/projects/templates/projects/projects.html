@@ -3,6 +3,7 @@
 {% block content %}
 <div class="main-container">
     <h1>Показывай себя и свои проекты. <br> Находи вдохноевение, коллег и новые знания.</h1>
+    {% csrf_token %}
     <form action="{% url 'projects' %}" method="get">
         <input class="input-search" placeholder="Search by Project Title..." type="text" name="search_query" value="{{search_query}}">
         <!--<button type="submit">Search</button>-->
@@ -22,9 +23,8 @@
     {% endfor %}
     </ul>
 
-
-    <div class = "container-card">
-    <div class="card" style="width: 18rem; margin="18rem"">
+    <div class="container-card">
+      <div class="project-card">
         <img src="{{project.featured_image}}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">title {{project.title}}</h5>
@@ -36,8 +36,7 @@
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
-
-      <div class="card" style="width: 18rem;">
+      <div class="project-card">
         <img src="{{project.featured_image}}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">title {{project.title}}</h5>
@@ -49,7 +48,7 @@
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
-      <div class="card" style="width: 18rem;">
+      <div class="project-card">
         <img src="{{project.featured_image}}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">title {{project.title}}</h5>
@@ -61,7 +60,114 @@
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
-    </div>
-
+      <div class="project-card">
+        <img src="{{project.featured_image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">title {{project.title}}</h5>
+          <p class="card-text">created {{project.created}}</p>
+          <p class="card-text">description {{project.description}}</p>
+          <p class="card-text">Feedback {{project.vote_total}} Votes</p>
+          <p class="card-text">{{project.vote_ratio}}Positive</p>   
+          <p class="card-text">tags{{project.tags}}</p>        
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="{{project.featured_image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">title {{project.title}}</h5>
+          <p class="card-text">created {{project.created}}</p>
+          <p class="card-text">description {{project.description}}</p>
+          <p class="card-text">Feedback {{project.vote_total}} Votes</p>
+          <p class="card-text">{{project.vote_ratio}}Positive</p>   
+          <p class="card-text">tags{{project.tags}}</p>        
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="{{project.featured_image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">title {{project.title}}</h5>
+          <p class="card-text">created {{project.created}}</p>
+          <p class="card-text">description {{project.description}}</p>
+          <p class="card-text">Feedback {{project.vote_total}} Votes</p>
+          <p class="card-text">{{project.vote_ratio}}Positive</p>   
+          <p class="card-text">tags{{project.tags}}</p>        
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="{{project.featured_image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">title {{project.title}}</h5>
+          <p class="card-text">created {{project.created}}</p>
+          <p class="card-text">description {{project.description}}</p>
+          <p class="card-text">Feedback {{project.vote_total}} Votes</p>
+          <p class="card-text">{{project.vote_ratio}}Positive</p>   
+          <p class="card-text">tags{{project.tags}}</p>        
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="{{project.featured_image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">title {{project.title}}</h5>
+          <p class="card-text">created {{project.created}}</p>
+          <p class="card-text">description {{project.description}}</p>
+          <p class="card-text">Feedback {{project.vote_total}} Votes</p>
+          <p class="card-text">{{project.vote_ratio}}Positive</p>   
+          <p class="card-text">tags{{project.tags}}</p>        
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="{{project.featured_image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">title {{project.title}}</h5>
+          <p class="card-text">created {{project.created}}</p>
+          <p class="card-text">description {{project.description}}</p>
+          <p class="card-text">Feedback {{project.vote_total}} Votes</p>
+          <p class="card-text">{{project.vote_ratio}}Positive</p>   
+          <p class="card-text">tags{{project.tags}}</p>        
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="{{project.featured_image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">title {{project.title}}</h5>
+          <p class="card-text">created {{project.created}}</p>
+          <p class="card-text">description {{project.description}}</p>
+          <p class="card-text">Feedback {{project.vote_total}} Votes</p>
+          <p class="card-text">{{project.vote_ratio}}Positive</p>   
+          <p class="card-text">tags{{project.tags}}</p>        
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="{{project.featured_image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">title {{project.title}}</h5>
+          <p class="card-text">created {{project.created}}</p>
+          <p class="card-text">description {{project.description}}</p>
+          <p class="card-text">Feedback {{project.vote_total}} Votes</p>
+          <p class="card-text">{{project.vote_ratio}}Positive</p>   
+          <p class="card-text">tags{{project.tags}}</p>        
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="{{project.featured_image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">title {{project.title}}</h5>
+          <p class="card-text">created {{project.created}}</p>
+          <p class="card-text">description {{project.description}}</p>
+          <p class="card-text">Feedback {{project.vote_total}} Votes</p>
+          <p class="card-text">{{project.vote_ratio}}Positive</p>   
+          <p class="card-text">tags{{project.tags}}</p>        
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+  </div>
 
 {% endblock content %}
