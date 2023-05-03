@@ -1,7 +1,7 @@
 {% extends 'main.html' %}
-
+<!--в ьейне ткнуть на веь сайт, чтобы перейти на эту страницу-->
 {% block content %}
-<img style="max-width: 500px;" src="{{ project.featured_image.url }}">
+<!--<img style="max-width: 500px;" src="{{ project.featured_image.url }}">
 <h1>{{project.title}}</h1>
 <hr>
 {% for tag in tags %}
@@ -10,6 +10,43 @@
 </span>
 {% endfor %}
 <hr>
-<p>{{project.description}}</p>
+<p>{{project.description}}</p>-->
+
+<h3>Tools & stacks</h3>
+{% for tag in tags %}
+<span>
+    {{tag}}
+</span>
+{% endfor %}
+<img src="{{ project.featured_image.url }}" class="img-for-project" alt="...">
+<h2>ФИО пользователя</h2>
+        <h3>название проекта {{project.title}} </h3>
+        <h4>О проекте/h4>
+        <h4>Описание проекта {{project.description}}</h4>
+        <h2>Feedback</h2>
+
+
+        <form>
+            <fieldset class="uk-fieldset">
+        
+                <div class="uk-margin">
+                    <input class="uk-input" type="text" placeholder="Input">
+                </div>
+        
+                <div class="uk-margin">
+                    <select class="uk-select">
+                        <option>Опция 01</option>
+                        <option>Опция 02</option>
+                    </select>
+                </div>
+        
+                <div class="uk-margin">
+                    <textarea class="uk-textarea" rows="5" placeholder="Textarea"></textarea>
+                </div>
+                
+            </fieldset>
+            <button type="submit">Отправить</button>
+        </form>
+        <h2>от кого</h2>
 
 {% endblock content %}
