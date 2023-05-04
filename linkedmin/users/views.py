@@ -16,7 +16,7 @@ from .forms import MessageForm
 def profiles(request):
     profiles=Profile.objects.all()
     context = {'profiles':profiles}    
-        return render(request, 'users/profiles.html')
+    return render(request, 'users/profiles.html')
 
 def loginUser(request):
     pass
