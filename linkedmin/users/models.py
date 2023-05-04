@@ -2,8 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 import uuid
 
-# Create your models here.
-
+# profile model for additional user information 
+# (1-to-1 relationship with Django User model)
 
 class Profile(models.Model):
     user = models.OneToOneField(
@@ -26,3 +26,6 @@ class Profile(models.Model):
 
     def __str__(self):
         return str(self.user.username)
+
+
+
