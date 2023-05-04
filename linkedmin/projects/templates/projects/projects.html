@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="main-container">
-    <h1>Показывай себя и свои проекты. <br> Находи вдохноевение, коллег и новые знания.</h1>
+    <h1>Показывай себя и свои проекты. <br> Находи вдохновение, коллег и новые знания.</h1>
     {% csrf_token %}
     <form action="{% url 'projects' %}" method="get">
         <input class="input-search" placeholder="Search by Project Title..." type="text" name="search_query" value="{{search_query}}">
@@ -22,22 +22,21 @@
     
     {% endfor %}
     </ul>-->
+    <div class="container-card">
     {% for project in projects %}
 
-    <div class="container-card">
+    
       <div class="project-card">
         <img src="{{project.featured_image.url}}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">title {{project.title}}</h5>
-          <p class="card-text">created {{project.created}}</p> 
+          <h4 class="card-title">{{project.title}}</h4>
           <p class="card-text">description {{project.description}}</p>
-          <p class="card-text">Feedback {{project.vote_total}} Vote {{project.vote_total|pluralize:"s"}}</p>
-          <p class="card-text">Positive {{project.vote_ratio}}%</p>   
+          <p class="card-text">{{project.vote_ratio}}% Positive Feedback ({{project.vote_total}} Vote{{project.vote_total|pluralize:"s"}})</p>
           <p class="card-text">tags{{project.tags}}</p>        
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
-      </div>
-    </div>
+      </div>  
 
     {% endfor %}
+  </div>
 {% endblock content %}
