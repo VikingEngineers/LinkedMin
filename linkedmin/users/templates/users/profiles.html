@@ -5,7 +5,7 @@
         <h1>Показывай себя и свои проекты. <br> Находи вдохновение, коллег и новые знания.</h1>
         {% csrf_token %}
         <form action="{% url 'projects' %}" method="get">
-            <input class="input-search" placeholder="Search by Project Title..." type="text" name="search_query" value="{{search_query}}">
+            <input class="input-search" placeholder="Search by developer name..." type="text" name="search_query" value="{{search_query}}">
             <!--<button type="submit">Search</button>-->
             <input class="btn-search" type="submit" value="Search" />
         </form>
@@ -37,5 +37,5 @@
                 </div>
                 {% endfor %}
 
-
+                {% include 'pagination.html' with queryset=profiles custom_range=custom_range %}
 {% endblock content %}
