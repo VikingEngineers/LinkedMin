@@ -6,12 +6,17 @@
                 <a id="logo" href="{% url 'projects' %}">LinkedMin</a> 
                 <ul>
                 <li><a href="{% url 'profiles' %}">DevOps</a></li>
-                <li><a href="{% url 'projects' %}">Project</a></li>
-                <li><a href="{% url 'create-project' %}">Add Project</a></li>
+                <li><a href="{% url 'projects' %}">Projects</a></li>
+                
+                {% if request.user.is_authenticated %}
                 <li><a href="#">Inbox</a></li>
-                <li><a href="#">Account</a></li>
-                <li><a href="#" class="btn">SignUp / LogIn</a></li>
-                </ul>
+                <li><a href="{% url 'create-project' %}">Add Project</a></li>
+                <li><a href="{% url 'account' %}">Account</a></li>
+                <li><a href="{% url 'logout' %}" class="btn">LogOut</a></li>
+                {% else %}
+                <li><a href="{% url 'login' %}" class="btn">SignUp / LogIn</a></li>
+                {% endif %}    
+            </ul>
               </div>        
         </nav>
     </div>   

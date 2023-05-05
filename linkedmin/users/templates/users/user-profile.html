@@ -1,0 +1,96 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+
+                        <img e.name}}</h2>
+                        <p >{{profile.short_intro}}</p>
+                        <p >Based in {{profile.location}}</p>
+                        <ul >
+
+                            {% if profile.social_github %}
+                            <li>
+                                <a title="Github" href="{{profile.social_github}}" target="_blank"><i
+                                        ></i></a>
+                            </li>
+                            {% endif %}
+
+
+                            {% if profile.social_twitter %}
+                            <li>
+                                <a title="Twitter" href="{{profile.social_twitter}}" target="_blank"><i
+                                        ></i></a>
+                            </li>
+                            {% endif %}
+
+                            {% if profile.social_vk %}
+                            <li>
+                                <a title="LinkedIn" href="{{profile.social_vk}}" target="_blank"><i
+                                        ></i></a>
+                            </li>
+                            {% endif %}
+
+                            {% if profile.social_website %}
+                            <li>
+                                <a title="Personal Website" href="{{profile.social_website}}" target="_blank"><i
+                                        ></i></a>
+                            </li>
+                            {% endif %}
+
+                        </ul>
+                        {% if request.user.profile.id != profile.id %}
+                        <a href="{% url 'create-message' profile.id %}" >Send Message </a>
+                        {% endif %}
+
+            
+                    <h3 >About Me</h3>
+                    <p >{{profile.bio}}</p>
+                    <h3 >Skills</h3>
+                        {% for skill in topSkills %}
+                        <div >
+                            <h4 >{{skill.name}}</h4>
+                            <p >{{skill.description}}</p>
+                        </div>
+                        {% endfor %}
+
+                        <h3 >Other Skills</h3>
+                            {% for skill in otherSkills %}
+                            <span >
+                                <small>{{skill}}</small>
+                            </span>
+                            {% endfor %}
+
+                <h3>Projects</h3>
+                    <div class="grid grid--two">
+                        {% for project in profile.project_set.all %}
+                        <div class="column">
+                            <div class="card project">
+                                <a href="{% url 'project' project.id %}" class="project">
+                                    <img class="project__thumbnail" src="{{project.featured_image.url}}"
+                                        alt="project thumbnail" />
+                                    <div class="card__body">
+                                        <h3 class="project__title">{{project.title}}</h3>
+                                        <p><a class="project__author"
+                                                href="{% url 'user-profile' project.owner.id %}">By
+                                                {{project.owner.name}}</a>
+                                        </p>
+                                        <p class="project--rating">
+                                            <span style="font-weight: bold;">{{project.vote_ratio}}%</span> Postitive
+                                            Feedback ({{project.vote_total}} Vote{{project.vote_total|pluralize:"s"}})
+                                        </p>
+                                        <div class="project__tags">
+
+                                            {% for tag in project.tags.all %}
+                                            <span class="tag tag--pill tag--main">
+                                                <small>{{tag}}</small>
+                                            </span>
+                                            {% endfor %}
+
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+ {% endblock content %}
