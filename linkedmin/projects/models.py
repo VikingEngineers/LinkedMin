@@ -4,8 +4,6 @@ from django.db.models.deletion import CASCADE
 import uuid
 
 # Create your models here.
-
-
 class Project(models.Model):
     owner = models.ForeignKey(
         Profile, null=True, blank=True, on_delete=models.SET_NULL)
