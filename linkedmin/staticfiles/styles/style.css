@@ -1,0 +1,210 @@
+/*Общий стиль*/
+html, body{
+    height: 100%;
+    background: #FAFAFA;
+}
+     
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Space Mono', monospace;
+    font-size: 12pt;
+}
+
+p, ol, ul{
+    margin-top: 0;
+}
+ 
+p {
+    line-height: 180%;
+}
+ 
+ol, ul{
+    padding: 0;
+    list-style: none;
+}
+h1{
+    text-align: center;
+    color: #FAFAFA;
+    font-family: 'Press Start 2P';
+    padding: 60px;
+    font-size:36px;
+}
+h2{
+    color: #05386B;
+    font-family: 'Space Mono', monospace;
+    padding: 54px;
+}
+h3{
+    color: #05386B;
+    font-family: 'Space Mono', monospace;
+    padding: 48px;
+}
+h4{
+    color: #05386B;
+    font-family: 'Press Start 2P';
+    padding: 38px;
+}
+h5{
+    color: #05386B;
+    font-family: 'Space Mono', monospace;
+    padding: 28px;
+}
+/*LOGO*/
+#logo{
+    color: #66FCF1;
+    font-size: 32px;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: 'Press Start 2P';
+    text-align: center;
+    margin-right: 150px;
+}
+/*Шапка сайта*/         
+header{
+    background: #282828;
+}
+
+#top-header{
+    text-align: center;
+    height: 150px;
+}
+/*Навигация*/
+#menu{
+    
+    width: 90%;
+    height: 100%;
+    margin-left: 150px;
+    padding-top: 10px;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+    
+#menu ul{
+    text-align: center;
+    float: right;
+    margin-top: 10px;
+}
+     
+#menu li{
+    display: inline-block;
+    padding: 10px;
+    margin: none;
+}
+     
+#menu li a, #menu li span{
+    display: inline-block;
+    padding: 0em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 60px;
+    font-family: 'Press Start 2P';
+    color: #66FCF1;
+} 
+    
+#menu li:hover a, #menu li span{
+    color: #FAFAFA;
+    text-decoration: none;
+    border-color: #66FCF1;
+    background-color: #282828;
+}
+
+/*Надпись и поисковая форма*/
+* {box-sizing: border-box;}
+form {
+  position: relative;
+  width: 80%x;
+  margin: 0 auto;
+  margin-left: 450px;
+}
+.input-search {
+  width: 60%;
+  height: 42px;
+  padding-left: 10px;
+  border: 2px solid #66FCF1;
+  border-radius: 5px;
+  outline: none;
+  background: #FAFAFA;
+  color: #9E9C9C;
+  font-family: 'Press Start 2P';
+  font-size: 16px;
+}
+
+button {
+  position: absolute; 
+  top: 0;
+  right: 0px;
+  width: 65px;
+  height: 42px;
+  border: none;
+  background: #05386B;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-family: 'Press Start 2P';
+  font-size: 16px;
+  color: #FAFAFA;
+}
+button:before {
+  font-family: 'Press Start 2P';
+  font-size: 16px;
+  color: #FAFAFA;
+}
+.img-for-project{
+    width: 450px;
+    height: 300px;
+}
+.main-container{
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+    background: #282828;
+}
+.btn{
+    background-color: #282828;
+    border-color: #66FCF1;
+    border-radius: 10px;
+    border-width: 2px;
+}
+.btn-search{
+    background-color: #66FCF1;
+    border-color: #66FCF1;
+    border-radius: 5px;
+    border-width: 2px;
+    height: 42px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #9E9C9C;
+    font-family: 'Press Start 2P';
+    font-size: 16px;
+    font-weight: 600;
+}
+/*Стиль карточки проекта на главной странице*/
+.container-card{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    /*overflow: hidden;*/
+    max-width: 1600px;
+    margin-left: 150px;
+}
+.project-card{
+    width: 300px;
+  min-height: 500px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column; /* Размещаем элементы в колонку */
+  border-radius: 10px;
+  transition: 0.2s;
+  position: relative;
+  background-color: #ffffff;
+  margin: 50px;
+}
+/*Стиль single-project*/
+
+
+/*Подвал*/
+footer{
+    background-color: #282828;
+}
+
+
+
