@@ -58,17 +58,9 @@
 html{
   scroll-behavior: smooth;
   scroll-padding-top: 75px;
+  height: 100%;
 }
 
-body{
-  font-weight: 400;
-  overflow-x: hidden;
-  position: relative;
-  background-color: #b9b9b9;
-  color: #002346;
-  font-family: 'SpaceMono', monospace;
-  min-height: 800px;
-}
 header{
   background-color: #282828;
   color: #66FCF1;
@@ -78,6 +70,27 @@ header{
   min-width: none;
   height: 120px;
   padding-top: 15px;
+}
+
+body{
+  font-weight: 400;
+  overflow-x: hidden;
+  background-color: #b9b9b9;
+  color: #002346;
+  font-family: 'SpaceMono', monospace;
+  /*min-height: 800px;*/
+  height: 100%;
+  position: relative;
+}
+
+footer{
+  background-color: #282828;
+  margin-top: 10%;
+  height: 100px;
+  padding-top: 2%;
+  position: relative;
+
+  width: 100%;
 }
 h1,h2,h3,h4,h5,h6{
   margin: 0;
@@ -104,12 +117,7 @@ h4{
   padding-bottom: 2%;
   border-color:#070707;
 }
-footer{
-  background-color: #282828;
-  margin-top: 10%;
-  height: 100px;
-  padding-top: 2%;
-}
+
 
 .btn-send{
   background-color: #66FCF1;
@@ -232,6 +240,7 @@ button:before {
     font-size: 16px;
     font-weight: 600;
     margin-left: 0.25%;
+    cursor: pointer;
 }
 .form-search{
   background: #282828;
@@ -285,7 +294,44 @@ button:before {
 /*Inbox*/
 
 /*Add Project*/
-
+.addprcontainer{
+  margin-top: 5%;
+  margin-left: 15%;
+}
+.prinput{
+  width: 50%;
+  height: 42px;
+  padding-left: 10px;
+  border: 2px solid #66FCF1;
+  border-radius: 5px;
+  outline: none;
+  background: #FAFAFA;
+  color: #9E9C9C;
+  font-family: 'Press Start 2P';
+  font-size: 16px;
+  margin: 1%;
+}
+.btn-add{
+  background-color: #66FCF1;
+  border-color: #66FCF1;
+  border-radius: 5px;
+  border-width: 2px;
+  height: 42px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #9E9C9C;
+  font-family: 'Press Start 2P';
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 0.05%;
+  cursor: pointer;
+}
+.icontitle{
+  display: inline-flex;
+}
+.btninut{
+  display:span;
+}
 /*Account*/
 .left-content{
   padding-top: 2%;
@@ -329,7 +375,13 @@ button:before {
 
 }*/
 /*SignUp/LogIn*/
-
+.formcontainer{
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  padding-left: 25%;
+  padding-top: 10%;
+}
 
 
 

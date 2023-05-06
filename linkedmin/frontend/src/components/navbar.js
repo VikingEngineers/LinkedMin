@@ -1,8 +1,4 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import Typewriter from "typewriter-effect";
 import Button from 'react-bootstrap/esm/Button';
 
 import { BrowserRouter as Router, Routes, Route}
@@ -11,7 +7,7 @@ import {Main} from '../components/main';
 import Profiles from '../components/pages/profiles';
 import SingleProject from '../components/pages/single_project';
 import UserForm from '../components/pages/user_form';
-import SignUp from '../components/pages/signup';
+import SignUp from './pages/signup';
 import Inbox from '../components/pages/inbox';
 import AddProject from '../components/pages/add_project';
 import Logout from '../components/pages/logout';
