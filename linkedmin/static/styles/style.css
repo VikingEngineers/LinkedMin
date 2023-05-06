@@ -207,4 +207,55 @@ footer{
 }
 
 
-
+header{
+    background-color: #282c34;
+    color: #66FCF1;
+    font-family: 'Press Start 2P';
+    height: 100px;
+  }
+  
+#logo{
+    color: #66FCF1;
+    font-size: 32px;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: 'Press Start 2P';
+    text-align: center;
+    margin-left: 50px;
+  }
+  
+  /*Навигация*/
+  nav{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    max-width: 1400px;
+  }
+  #menu{
+    width: 95%;
+    height: 100%;
+    margin-left: 450px;
+    padding-top: 10px;
+  }
+     
+  #menu a {
+    padding: 0em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 60px;
+    font-family: 'Press Start 2P';
+    color: #66FCF1;
+    text-align: justify;
+    font-size: 14px;
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px;
+  } 
+    
+  #menu a:hover {
+    color: #FAFAFA;
+    text-decoration: none;
+    border-color: #66FCF1;
+    background-color: #282828;
+    
+  }
