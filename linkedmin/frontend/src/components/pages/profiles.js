@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
+import Pagination from 'react-bootstrap/Pagination';
 
 import testPhoto2 from './img/avatar_fem.jpg'
 
@@ -63,6 +64,7 @@ export default function Profiles() {
             <button class="btn-send" onClick={handleMenuClick}>Go somewhere</button>
             </div>
         </div>
+        
     </Container>
     )  
 }

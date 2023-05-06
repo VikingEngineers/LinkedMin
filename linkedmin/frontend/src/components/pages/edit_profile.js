@@ -1,19 +1,25 @@
-import React from 'react';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Table from 'react-bootstrap/Table';
+import React from "react";
 
 import icon_next from './img/play_media_icon.svg'
 
 
-export default function AddProject() {
+export default function EditProfile (){
+    const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorE2, setAnchorE2] = React.useState(null);
 
 
-
-    return(
-      <div>  
+  const handleClick = (event) => {
+      setAnchorEl(event.currentTarget);
+  };
+  const handleMenuClick = (event) => {
+      setAnchorE2(event.currentTarget);
+  }
+  const handleClose = () => {
+      setAnchorEl(null);
+      setAnchorE2(null);
+  };
+  return(
+<div>  
         <div class="addprcontainer">  
         <div class="icontitle">
           <img class="icon"src={icon_next}/>
@@ -72,5 +78,5 @@ export default function AddProject() {
 
         </div>  
       </div>
-    )  
+    )
 }

@@ -4,7 +4,8 @@ import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Table from 'react-bootstrap/Table';
-
+import { BrowserRouter as Router, Routes, Route, Link}
+    from 'react-router-dom';
 
 
 import testPhoto1 from './img/avatar_fem.jpg'
@@ -54,6 +55,10 @@ export default function UserForm (){
           <td></td>
           <td><button class="btn-send" onClick={handleMenuClick}>Send Message</button></td>
         </tr>
+        <tr>
+          <td></td>
+          <td><button class="btn-send" onClick={handleMenuClick} href="/edit_profile">Edit Profile</button></td>
+        </tr>
         </tbody>
         </div> 
         
@@ -83,5 +88,7 @@ export default function UserForm (){
 
         </div>
         </div> 
+
+
     </body>
     )}
