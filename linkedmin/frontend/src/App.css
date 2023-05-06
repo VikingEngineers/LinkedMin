@@ -49,6 +49,8 @@
 }
 
 /*Default CSS*/
+/*DevOps*/
+/*Projects*/
 *{
   margin: 0;
   padding: 0;
@@ -287,12 +289,15 @@ button:before {
   margin-bottom: 10px;
 }
 
-/*DevOps*/
-
-/*Projects*/
-
 /*Inbox*/
-
+.inboxtext{
+  text-decoration: none;
+  font-size: larger;
+  color: #282828;
+}
+.spantext{
+  
+}
 /*Add Project*/
 .addprcontainer{
   margin-top: 5%;
