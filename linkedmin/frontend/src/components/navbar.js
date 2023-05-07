@@ -1,4 +1,5 @@
 import React from 'react';
+import MediaQuery from 'react-responsive'
 import Button from 'react-bootstrap/esm/Button';
 
 import { BrowserRouter as Router, Routes, Route}
@@ -32,7 +33,7 @@ import Logout from '../components/pages/logout';
     return(
     <div>
         <header> 
-            
+   
             <nav> 
                 <a id="logo" href="#">LinkedMin</a>  
                 <div id="menu">

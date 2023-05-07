@@ -25,7 +25,7 @@ export const Main = ()=>{
       setAnchorE2(null);
   };
     return(
-      <Container>
+      <div>
         <div class="main-container">
       <h1 class="h1_main">
       <Typewriter
@@ -42,12 +42,12 @@ export const Main = ()=>{
   .start();
   }}  />
       </h1>
-      <div class="form-search">
+
         <form action="{% url 'projects' %}" method="get">
         <input class="input-search" placeholder="Search by Project Title..." type="text" name="search_query"/>
         <input class="btn-search" type="submit" value="Search" />
     </form>
-    </div>
+
         </div>
 
         <div class="prcontainer">
@@ -63,6 +63,6 @@ export const Main = ()=>{
         <button class="btn-send" onClick={handleMenuClick}>Go somewhere</button>
         </div>
     </div>
-</Container>
+</div>
     )
 }
