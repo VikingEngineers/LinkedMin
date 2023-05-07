@@ -15,6 +15,7 @@ export default function AddProject() {
     return(
       <div>  
         <div class="addprcontainer">  
+        <h3>Add Project Page</h3>
         <div class="icontitle">
           <img class="icon"src={icon_next}/>
           <h3>title</h3>
