@@ -1,0 +1,389 @@
+/*************************/
+.App {
+  text-align:left;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*Custom Fonts*/
+@font-face{
+  font-family: Press Start 2P;
+  src:url('./fonts/PressStart2P-Regular.ttf')
+}
+@font-face{
+  font-family: SpaceMono;
+  src:url('./fonts/SpaceMono-Regular.ttf')
+}
+
+/*Default CSS*/
+/*DevOps*/
+/*Projects*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+  height: 100%;
+}
+
+header{
+  /*background-color: #282828;*/
+  color: #66FCF1;
+  font-family: 'Press Start 2P';
+  max-height: 350px;
+  min-width: none;
+  height: 120px;
+  padding-top: 15px;
+  
+}
+
+body{
+  font-weight: 400;
+  overflow-x: hidden;
+  background-color: #b9b9b9;
+  color: #002346;
+  font-family: 'SpaceMono', monospace;
+  /*min-height: 800px;*/
+  height: 100%;
+  position: relative;
+  background-image: url('./components/img/mv2.gif');
+  background-repeat: no-repeat;
+  background-size:100%;
+}
+
+footer{
+  /*background-color: #282828;*/
+  margin-top: 10%;
+  height: 100px;
+  padding-top: 2%;
+  position: relative;
+  width: 100%;
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+h1{
+  font-family: 'Press Start 2P';
+  color: #FAFAFA;
+}
+h3{
+  font-family: 'Press Start 2P';
+  color: #66FCF1;
+  font-size: 250%;
+  padding-top: 1%;
+  padding-bottom: 2%;
+  border-color:#282828;
+  border-width: 1%;
+}
+h4{
+  font-size: 110%;
+  padding-top: 1%;
+  padding-bottom: 2%;
+  border-color:#070707;
+}
+
+.btn-send{
+  background-color: #66FCF1;
+  border-color: #66FCF1;
+  border-radius: 5px;
+  border-width: 2px;
+  height: 50px;
+  width: 90%;
+  color: #9E9C9C;
+  font-family: 'Press Start 2P';
+  font-size: 14px;
+  font-weight: 600;
+  margin: 1%;
+  text-align: center;
+  margin: 5%;
+}
+/*NavBar*/
+nav{
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+#logo{
+  color: #66FCF1;
+  font-size: 32px;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: 'Press Start 2P';
+  text-align: center;
+  padding-left: 1%;
+
+}
+#menu{
+  width: 95%;
+  height: 100%;
+  padding-top: 10px;
+  display: inline-block;
+  justify-content: flex-end;
+  text-align: right;
+}
+   
+#menu a {
+  padding: 0em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 60px;
+  font-family: 'Press Start 2P';
+  color: #66FCF1;
+  text-align: justify;
+  font-size: 14px;
+  margin-top: 10px;
+} 
+  
+#menu a:hover {
+  color: #FAFAFA;
+  text-decoration: none;
+  border-color: #66FCF1;
+  
+}
+/*Search Form*/
+* {box-sizing: border-box;}
+form {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+
+}
+.input-search {
+  width: 60%;
+  height: 42px;
+  padding-left: 10px;
+  border: 2px solid #66FCF1;
+  border-radius: 5px;
+  outline: none;
+  background: #FAFAFA;
+  color: #9E9C9C;
+  font-family: 'Press Start 2P';
+  font-size: 16px;
+}
+
+button {
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-family: 'Press Start 2P';
+  font-size: 16px;
+  color: #FAFAFA;
+}
+button:before {
+  font-family: 'Press Start 2P';
+  font-size: 16px;
+  color: #FAFAFA;
+}
+.img-for-project{
+    width: 450px;
+    height: 300px;
+}
+.main-container{
+    /*background: #282828;*/
+    text-align: center;
+    margin-bottom: 10%;
+
+}
+
+.btn-search{
+    background-color: #66FCF1;
+    border-color: #66FCF1;
+    border-radius: 5px;
+    border-width: 2px;
+    height: 42px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #9E9C9C;
+    font-family: 'Press Start 2P';
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 0.25%;
+    cursor: pointer;
+}
+
+.h1_main{
+  padding: 100px;
+}
+
+/*Card*/
+.description{
+  padding: 5%;
+}
+.prcontainer{
+  padding-top: 2%;
+  padding-left: 5%;
+}
+/*.container-card{
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  /*overflow: hidden;*/
+ /* max-width: 1600px;
+  margin-left: 150px;
+}*/
+.project-card{
+  width: 20%;
+  min-height: 40%;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column; /* Размещаем элементы в колонку */
+  transition: 0.2s;
+  position: relative;
+  background-color: #ffffff;
+  margin-top: 20px;
+  margin-right: 50px;
+  align-items: center;
+}
+.img-card-project{
+  width: 100%;
+  height: 50%;
+  margin-bottom: 10px;
+}
+
+/*Inbox*/
+.inboxtext{
+  text-decoration: none;
+  font-size: larger;
+  color: #282828;
+}
+
+/*Add Project*/
+.addprcontainer{
+  margin-top: 5%;
+  margin-left: 15%;
+}
+.prinput{
+  width: 50%;
+  height: 42px;
+  padding-left: 10px;
+  border: 2px solid #66FCF1;
+  border-radius: 5px;
+  outline: none;
+  background: #FAFAFA;
+  color: #9E9C9C;
+  font-family: 'Press Start 2P';
+  font-size: 16px;
+  margin: 1%;
+}
+.btn-add{
+  background-color: #66FCF1;
+  border-color: #66FCF1;
+  border-radius: 5px;
+  border-width: 2px;
+  height: 42px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #9E9C9C;
+  font-family: 'Press Start 2P';
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 0.05%;
+  cursor: pointer;
+}
+.icontitle{
+  display: inline-flex;
+}
+.btninut{
+  display:span;
+}
+/*Account*/
+.left-content{
+  padding-top: 2%;
+  padding-left: 15%;
+  width:50%;
+  float:left;
+}
+.right-content{
+  width:50%;
+  float:right;
+  padding-top: 2%;
+}
+.avatar{
+  width: 450px;
+  height: 450px;
+  border-radius: 100%;  /* Скругление углов изображения */
+  border: 5px solid #66FCF1; /* Цвет и ширину рамки */
+  box-shadow: 2px 1px 5px #999999; /* Цвет и размер тени */
+  margin-right: 50px;
+}
+.link-container{
+  align-items: center;
+  justify-content:space-between;
+}
+.icon{
+  width: 50px;
+  height: 50px;
+}
+.forlink{
+  width: 10px;
+  height: 50px;
+}
+/*.social-link{
+  width: 15%;
+  margin: 1%;
+  border: 3px solid #66FCF1; 
+  border-radius: 10px; 
+  background-color: #b9b9b9;
+  text-align: center;
+  font-family: 'Press Start 2P';
+
+}*/
+/*SignUp/LogIn*/
+.formcontainer{
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  padding-left: 25%;
+  padding-top: 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+  

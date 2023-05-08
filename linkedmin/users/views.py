@@ -79,10 +79,10 @@ def profiles(request):
 def userProfile(request, pk):
     profiles=Profile.objects.get(id=pk)
 
-    topSkills = profile.skill_set.exclude(description_exact="")
-    otherSkills = profile.skill_set.filter(description="")
+    topSkills = profiles.skill_set.exclude(description_exact="")
+    otherSkills = profiles.skill_set.filter(description="")
 
-    context = {'profile':profile, 'topSkills':topSkills ,'otherSkills':otherSkills}  
+    context = {'profile':profiles, 'topSkills':topSkills ,'otherSkills':otherSkills}  
     return render (request, 'users/user-profile.html')
 
 @login_required(login_url='login')
